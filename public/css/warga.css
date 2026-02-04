@@ -1,0 +1,267 @@
+/* ===== CUSTOM STYLES COMPATIBLE WITH BOOTSTRAP ===== */
+
+/* Family Grouping Styles */
+.family-header {
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+    color: white !important;
+}
+
+.family-header:hover {
+    background: linear-gradient(135deg, #764ba2 0%, #667eea 100%) !important;
+    transform: translateY(-1px);
+}
+
+.family-header h6 {
+    margin-bottom: 0;
+    color: inherit;
+}
+
+.family-member {
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.family-member:hover {
+    background-color: rgba(0, 123, 255, 0.05) !important;
+}
+
+.family-member.kepala-keluarga {
+    border-left: 4px solid #28a745;
+    background-color: rgba(40, 167, 69, 0.05);
+}
+
+.family-member.istri {
+    border-left: 4px solid #17a2b8;
+    background-color: rgba(23, 162, 184, 0.05);
+}
+
+.family-member.anak {
+    border-left: 4px solid #6c757d;
+    background-color: rgba(108, 117, 125, 0.05);
+}
+
+.family-separator td {
+    padding: 0.5rem !important;
+    background: linear-gradient(90deg, transparent, #e9ecef, transparent);
+}
+
+/* Custom Badge Colors */
+.badge.bg-pink {
+    background-color: #e83e8c !important;
+}
+
+.badge.bg-light-blue {
+    background-color: #d6eaf8 !important;
+    color: #2c3e50;
+}
+
+/* Status Nikah dengan warna lebih spesifik */
+.badge-status-kawin {
+    background: linear-gradient(135deg, #28a745, #20c997) !important;
+    color: white;
+}
+
+.badge-status-belum-kawin {
+    background: linear-gradient(135deg, #17a2b8, #6f42c1) !important;
+    color: white;
+}
+
+.badge-status-cerai {
+    background: linear-gradient(135deg, #fd7e14, #e74a3b) !important;
+    color: white;
+}
+
+/* Action Buttons Enhancement */
+.btn-action-group .btn {
+    border-radius: 0.25rem;
+    transition: all 0.3s ease;
+}
+
+.btn-action-group .btn:first-child {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.btn-action-group .btn:last-child {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.btn-warning {
+    background: linear-gradient(135deg, #ffc107, #fd7e14);
+    border-color: #ffc107;
+    color: #212529;
+}
+
+.btn-warning:hover {
+    background: linear-gradient(135deg, #e0a800, #e55a10);
+    border-color: #e0a800;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(255, 193, 7, 0.3);
+}
+
+.btn-danger {
+    background: linear-gradient(135deg, #dc3545, #c82333);
+    border-color: #dc3545;
+}
+
+.btn-danger:hover {
+    background: linear-gradient(135deg, #c82333, #a71e2a);
+    border-color: #c82333;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(220, 53, 69, 0.3);
+}
+
+/* Loading States */
+.loading-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+/* Search Box Enhancement */
+.search-box .input-group-text {
+    background-color: #f8f9fa;
+    border-right: none;
+}
+
+.search-box .form-control {
+    border-left: none;
+}
+
+.search-box .form-control:focus {
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+    border-color: #80bdff;
+}
+
+/* Table Responsive Enhancement */
+@media (max-width: 768px) {
+    .table-responsive-md-custom {
+        font-size: 0.875rem;
+    }
+    
+    .badge {
+        font-size: 0.7em;
+    }
+    
+    .btn-group-sm .btn {
+        padding: 0.25rem 0.5rem;
+    }
+}
+
+/* Animation Classes */
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.slide-down {
+    animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Custom Alert Styles */
+.alert-custom {
+    border: none;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* Hover Effects */
+.hover-shadow {
+    transition: all 0.3s ease;
+}
+
+.hover-shadow:hover {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+/* Text Utilities */
+.text-small {
+    font-size: 0.875rem;
+}
+
+.text-smaller {
+    font-size: 0.75rem;
+}
+
+/* Border Utilities */
+.border-left-primary {
+    border-left: 4px solid #007bff !important;
+}
+
+.border-left-success {
+    border-left: 4px solid #28a745 !important;
+}
+
+.border-left-warning {
+    border-left: 4px solid #ffc107 !important;
+}
+
+/* Background Utilities */
+.bg-gradient-primary {
+    background: linear-gradient(135deg, #007bff, #0056b3) !important;
+}
+
+.bg-gradient-success {
+    background: linear-gradient(135deg, #28a745, #1e7e34) !important;
+}
+
+/* Custom Card Styles */
+.card-custom {
+    border: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.card-custom:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Family Member Status */
+.family-member.meninggal {
+    background-color: rgba(220, 53, 69, 0.05) !important;
+    color: #6c757d;
+}
+
+.family-member.meninggal .text-muted {
+    color: #a0a0a0 !important;
+}
+
+/* Icon Enhancements */
+.icon-sm {
+    font-size: 0.875rem;
+}
+
+.icon-lg {
+    font-size: 1.25rem;
+}
+
+/* Responsive Table Cell */
+.table-cell-responsive {
+    min-width: 120px;
+}
+
+@media (max-width: 576px) {
+    .table-cell-responsive {
+        min-width: 100px;
+    }
+}
