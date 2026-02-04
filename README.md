@@ -1,61 +1,71 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Rural DX Platform - Web Administration System
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+![Laravel](https://img.shields.io/badge/Laravel-12.x-FF2D20?style=for-the-badge&logo=laravel&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-8.0-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-3.0-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
 
-## About Laravel
+**Rural DX Platform** adalah Sistem Informasi Administrasi Desa berbasis web yang dirancang untuk mendigitalisasi pelayanan publik. Sistem ini mempercepat proses administrasi melalui pengelolaan data warga terpadu dan otomatisasi pembuatan surat keterangan.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## 🚀 Fitur Utama
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+### 1. 👥 Manajemen Kependudukan (Data Warga)
+Pengelolaan database penduduk yang lengkap dan terpusat:
+* **Data Detail:** Mencatat NIK, No. KK, Nama, Tempat/Tanggal Lahir, hingga Pekerjaan.
+* **Pencarian Cepat:** Memudahkan petugas mencari data warga untuk keperluan administrasi.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### 2. 📄 Otomatisasi Surat (Smart Templates)
+Fitur generate surat otomatis yang menghemat waktu:
+* **Master Template:** Mendukung berbagai jenis surat (Surat Domisili, SKTM, Surat Kematian, dll).
+* **Auto-Fill:** Data warga otomatis terisi ke dalam draf surat hanya dengan memilih NIK.
+* **Arsip Surat:** Riwayat surat keluar tersimpan rapi dengan penomoran otomatis.
 
-## Learning Laravel
+### 3. 🔐 Multi-User Authentication
+Sistem keamanan berbasis peran (Role-Based Access Control):
+* **Admin:** Mengelola pengaturan sistem, manajemen user, dan data master.
+* **Petugas:** Fokus pada pelayanan loket, input data warga, dan pencetakan surat.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## 🛠️ Teknologi
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+* **Backend:** Laravel 12 & Laravel Breeze
+* **Database:** MySQL
+* **Frontend:** Blade Templates & Tailwind CSS
+* **Server:** Apache/Nginx
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## 📦 Instalasi & Penggunaan
 
-## Laravel Sponsors
+1.  **Clone Repository**
+    ```bash
+    git clone [https://github.com/EineKleine00/Rural-DX-Platform-Web-Administration-System.git](https://github.com/EineKleine00/Rural-DX-Platform-Web-Administration-System.git)
+    cd Rural-DX-Platform-Web-Administration-System
+    ```
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+2.  **Setup Environment**
+    ```bash
+    composer install
+    npm install
+    cp .env.example .env
+    php artisan key:generate
+    ```
 
-### Premium Partners
+3.  **Konfigurasi Database**
+    Sesuaikan file `.env` dengan database lokal Anda, lalu jalankan:
+    ```bash
+    php artisan migrate:fresh --seed
+    ```
+    *(Otomatis membuat akun Admin & data dummy)*
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+4.  **Jalankan Aplikasi**
+    ```bash
+    npm run dev
+    php artisan serve
+    ```
 
-## Contributing
+## 🔐 Akun Demo
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+| Role | Email | Password |
+| :--- | :--- | :--- |
+| **Admin** | `admin@kelurahan.id` | `password` |
+| **Petugas** | `petugas@example.com` | `password` |
 
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+---
+*Dibuat untuk mempermudah digitalisasi administrasi desa.*
